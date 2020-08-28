@@ -33,7 +33,7 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
     var hi = "hola";
     if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
-    bot.sendMessage(msg.chat.id,"Hola a todos menos a " + msg.fromfirst_name);
+    bot.sendMessage(msg.chat.id,"Hola a todos menos a " + msg.from.first_name);
     }
 
     var bye = "bye";
