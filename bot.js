@@ -29,6 +29,10 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
   //});
 
+bot.onText(/\/start/, (msg) => {
+    bot.sendMessage(msg.chat.id, `Bienvenida, ${msg.from.first_name}. Al mejor bot de todos.`);
+});
+
   bot.on('message', (msg) => {
 
     var hi = "hola";
@@ -39,6 +43,22 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
     var bye = "bye";
     if (msg.text.toString().toLowerCase().includes(bye)) {
     bot.sendMessage(msg.chat.id, "Wamos a mimir");
+    }
+
+    if (msg.text.toString().toLowerCase().includes("ñeka")) {
+    bot.sendMessage(msg.chat.id, 'Ñeka es la mejor gata de todas :3');
+    }
+    if (msg.text.toString().toLowerCase().includes("gato")) {
+      bot.sendMessage(msg.chat.id, 'Ñeka es la mejor gata de todas :3');
+    }
+    if (msg.text.toString().toLowerCase().includes("gata")) {
+      bot.sendMessage(msg.chat.id, 'Ñeka es la mejor gata de todas :3');
+    }
+    if (msg.text.toString().toLowerCase().includes("cat")) {
+      bot.sendMessage(msg.chat.id, 'Ñeka es la mejor gata de todas :3');
+    }
+    if (msg.text.toString().toLowerCase().includes("neko")) {
+      bot.sendMessage(msg.chat.id, 'Ñeka es la mejor gata de todas :3');
     }
 
     });
