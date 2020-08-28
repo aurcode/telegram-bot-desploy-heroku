@@ -13,14 +13,14 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.on('message', (msg) => {
-  const name = msg.from.first_name;
-  bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(() => {
-    // reply sent!
-  });
-});
+//bot.on('message', (msg) => {
+//  const name = msg.from.first_name;
+//  bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(() => {
+//    // reply sent!
+//  });
+//});
 
-bot.on('message', (msg) => {
+//bot.on('message', (msg) => {
 
   //var Hi = "hi";
   //if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
@@ -28,5 +28,19 @@ bot.on('message', (msg) => {
   //}
 
   //});
+
+  bot.on('message', (msg) => {
+
+    var hi = "hola";
+    if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
+    bot.sendMessage(msg.chat.id,"Hola a todos menos a " + msg.fromfirst_name);
+    }
+
+    var bye = "bye";
+    if (msg.text.toString().toLowerCase().includes(bye)) {
+    bot.sendMessage(msg.chat.id, "Wamos a mimir");
+    }
+
+    });
 
 module.exports = bot;
